@@ -1,0 +1,50 @@
+{
+    "name": "x-va/nova",
+    "description": "Nova admin package for X-VA",
+    "keywords": [
+        "x-va"
+    ],
+    "homepage": "https://github.com/x-va/nova",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Falcão",
+            "email": "bruno@x-va.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "XVA\\Nova\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "XVA\\Nova\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "XVA\\Nova\\NovaServiceProvider"
+            ]
+        }
+    }
+}
